@@ -1,9 +1,14 @@
+package programacion.basica.dos.tp1;
 
 public class MoldearDisco {
 	
 	private Double radioInterior;
 	private Double radioExterior;
 	
+	public MoldearDisco(double d, double e) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public void Disco(Double radioInterior,Double radioExterior){
 		
 		this.radioInterior=radioInterior;
