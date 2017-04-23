@@ -1,0 +1,33 @@
+package test.programacion.basica.dos.tp1;
+
+import org.junit.Assert;
+import org.junit.Test;
+import programacion.basica.dos.tp1.MoldearDisco;
+import static org.junit.Assert.*;
+
+public class TestMoldearDisco {
+
+	@Test
+	public void testQueCalculaElPerimetroInterior() {
+		MoldearDisco miDisco=new MoldearDisco(4.0,6.0);
+		Double perimetroInteriorEsperado=25.13;
+		Double perimetroInteriorObtenido=miDisco.calculoPerimetroInterior();
+		Assert.assertEquals(perimetroInteriorEsperado, perimetroInteriorObtenido,0.01);
+	}
+	
+	@Test
+	public void testQueCalculaElPerimetroExterior() {
+		MoldearDisco miDisco=new MoldearDisco(4.0,6.0);
+		Double perimetroExteriorEsperado=37.69;
+		Double perimetroExteriorObtenido=miDisco.calculoPerimetroExterior();
+		Assert.assertEquals(perimetroExteriorEsperado, perimetroExteriorObtenido,0.01);
+	}
+	
+	@Test
+	public void testQueCalculaLaSuperficieDelDisco(){
+		MoldearDisco miDisco=new MoldearDisco(4.0,6.0);
+		Double superficieDelDiscoEsperado=145769.89;
+		Double superficieDelDiscoObtenido=miDisco.calculoSuperficieTotalDelDisco();	
+		Assert.assertEquals(superficieDelDiscoEsperado, superficieDelDiscoObtenido,0.01);
+	}
+}
